@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'font';
+  src: url(../Assets/fonts/JosefinSans-Medium.ttf);
+}
+
+$font-1: 'font';
+
+$black: #141414;
+$grey: rgb(74, 74, 74);
+$background: #f0f0f0;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  background: $background;
+  font-family: $font-1;
+  // @include verticalCenter;
+  overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    overflow: auto;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 7rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  font-size: 1rem;
+}
+
+button {
+  background: transparent;
+  border: 0.12rem solid $black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}

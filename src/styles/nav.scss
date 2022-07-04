@@ -1,0 +1,197 @@
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+nav div{
+    display: flex;
+    width:content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo {
+    text-transform: none;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-right: 5vw;
+}
+
+nav section .logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:10% 15% 10% 5%;
+}
+
+.close-nav-bar_btn {
+    border: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.close-nav-bar_btn .material-symbols-outlined {
+    font-size: 3rem;
+}
+
+nav a {
+    margin: 0 1.5vw;
+}
+
+nav section .menu-deroulant {
+    margin: 1.5vh 1vw 0 1vw;
+}
+
+nav .menu-deroulant {
+    margin: 0 1vw;
+}
+
+nav div:last-child section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100vh;
+    width: 30vw;
+    background-color: red;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 100;
+}
+
+nav section a {
+    margin-top: 1.5vh;
+}
+
+nav div:last-child section div {
+    flex-direction: column;
+}
+
+nav .login_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 30%;
+}
+
+nav .login_div button {
+    width: 80%;
+}
+
+@media screen and (min-width: 550px) {
+    nav section {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $background;
+        height: 100vh;
+        width: 30vw;
+        transform: translate(100%, 0);
+        transition: 0s ease-in-out;
+        z-index: 100;
+        transition:all 0.25s ease-in-out, filter 0.2s;
+        filter: opacity(0);
+        flex-direction: column;
+    }
+    
+    nav section.active {
+        transform: translate(0%, 0);
+        transition: 0.25s ease-in-out, filter 0s;
+        filter: opacity(1);
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    nav section {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $background;
+        height: 100vh;
+        width: 60vw;
+        transform: translate(100%, 0);
+        transition: 0s ease-in-out;
+        z-index: 100;
+        transition:all 0.25s ease-in-out, filter 0.2s;
+        filter: opacity(0);
+        flex-direction: column;
+    }
+    nav section.active {
+        transform: translate(0%, 0);
+        transition: 0.25s ease-in-out, filter 0s;
+        filter: opacity(1);
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav section {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $background;
+        height: 100vh;
+        width: 100vw;
+        transform: translate(100%, 0);
+        transition: 0s ease-in-out;
+        z-index: 100;
+        transition:all 0.25s ease-in-out, filter 0.2s;
+        filter: opacity(0);
+        flex-direction: column;
+    }
+    nav section.active {
+        transform: translate(0%, 0);
+        transition: 0.25s ease-in-out, filter 0s;
+        filter: opacity(1);
+        flex-direction: column;
+    }
+}
+
+nav section .menu-deroulant {
+    z-index: 200;
+}
+
+nav .overflow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    filter: opacity(0);
+    transition:all  0.25s ease;
+}
+
+nav .overflow.active {
+    display: flex;
+    filter: opacity(0.3);
+    z-index: 50;
+    transition: all  0.1s ease;
+}
+
+.open-phone-nav-bar_btn {
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-phone-nav-bar_btn .material-symbols-outlined {
+    font-size: 3rem;
+}

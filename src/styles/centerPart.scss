@@ -1,0 +1,117 @@
+.center-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+    width: 80vw;
+    flex-direction: row;
+}
+
+.center-part .hero-desktop {
+    position: relative;
+    height: 90%;
+    margin: 0 0 0 0;
+}
+
+.center-part .hero-portable {
+    display: none;
+}
+
+.center-part .contenu {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    align-items: left;
+    justify-content: end;
+}
+
+.center-part .contenu h1 {
+    font-size: 7rem;
+    letter-spacing: -0.4rem;
+    text-transform: none;
+    line-height: 0.9;
+    margin-bottom: 7.5vh;
+}
+
+@media screen and (orientation: portrait) {
+    .center-part .contenu p {
+        width: 100%;
+        font-size: 1vh;
+    }
+}
+
+.center-part .contenu p {
+    color: $grey;
+    font-size: 1.5rem;
+    text-transform: none;
+    width: 85%;
+    margin-bottom: 5vh;
+}
+
+.center-part .contenu button {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    margin-bottom: 10vh;
+    width: fit-content;
+}
+
+@media screen and (orientation: portrait) {
+    .hero-desktop {
+        display: none;
+    }
+
+    .center-part {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .center-part .contenu {
+        width: 100%;
+    }
+
+    .center-part .hero-desktop {
+        display: none;
+    }
+
+    .center-part .contenu {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center-part .hero-portable {
+        width: 100%;
+        height: auto;
+    }
+
+    .center-part .contenu p {
+        text-align: center;
+        width: 80%;
+    }
+
+    .center-part .contenu br {
+        display: none;
+    }
+
+    .center-part .contenu h1 {
+        width: 100%;
+        font-size: 10vh;
+        text-align: center;
+        margin-bottom: 5vw;
+        margin-top: 20vw;
+        letter-spacing: -0.2rem;
+    }
+
+    .center-part .hero-portable {
+        display: block;
+        margin-top: -20vw;
+        margin-bottom: 1rem;
+    }
+
+    .center-part button {
+        background-color: $black;
+        color: white;
+        margin-bottom: 0vh;
+    }
+}

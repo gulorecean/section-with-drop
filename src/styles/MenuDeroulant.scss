@@ -1,0 +1,88 @@
+.menu-deroulant {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    overflow: visible;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.menu-deroulant-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-deroulant-title span {
+    margin-left: 0.25rem;
+}
+
+.menu-deroulant-items-Container {
+    filter: opacity(0);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: $background;
+    box-shadow: rgba(0, 0, 0, 0.119) 0 0 1rem 0.25rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    top: 4.5rem;
+    align-items: flex-start;
+    color: $grey;
+}
+
+#features {
+    transform: translate(-20%);
+}
+
+#company {
+    transform: translate(10%);
+}
+
+.menu-deroulant-items-Container .item {
+    display: flex;
+    align-items: center;
+}
+
+.menu-deroulant-items-Container .item span {
+    margin: 0.5rem 1vw;
+}
+
+.menu-deroulant.active .menu-deroulant-items-Container {
+    filter: opacity(1);
+    z-index: 100;
+}
+
+.menu-deroulant .material-symbols-outlined {
+    transform: rotate(0deg);
+    transition: 0.2s;
+}
+
+.menu-deroulant.active .material-symbols-outlined {
+    transform: rotate(-180deg);
+    transition: 0.2s;
+}
+
+// task bar phone
+
+nav section .menu-deroulant-items-Container {
+    display: none;
+    position: static;
+    width: 100%;
+}
+nav section #features, #company {
+    transform: translate(0);
+}
+
+nav section .menu-deroulant.active .menu-deroulant-items-Container {
+    display: flex;
+    position: static;
+    box-shadow: none
+}
+
+nav section .menu-deroulant {
+    height: min-content;
+    width: 100%;
+    justify-content: left;
+    align-items: flex-start;
+}
